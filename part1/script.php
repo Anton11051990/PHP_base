@@ -1,21 +1,10 @@
-<?php 
-$info = "Приветствуем вас на мини опроснике по истории.";
-$userName = readline("Как ваше имя?");
-$historyQuestion = "В каком году было крещение Руси?";
-$answerHistory = "988";
-$optionsAnswerHistory = "458, 988, 1001";
-$content = "$userName ответьте на вопрос.\n $historyQuestion .\n Варианты ответа: $optionsAnswerHistory.";
+<?php
+    $arr1 = [1,2,3,4,5,6,7,8,9,10];
+    $arr2 = [10,9,8,7,6,5,4,3,2,1];
 
-echo "$info";
-echo "$userName ответьте на вопрос.\n $historyQuestion .\n Варианты ответа: $optionsAnswerHistory. ";
-
-    for ($counter=0; ; $counter++) { 
-        $userAnswer = (int)readline("Ваш вариант ответа:");
-        if ($userAnswer == $answerHistory) {
-            echo "Отлично";
-            break;
-        } else {
-            echo "Не верно \n";
-        }
-
+    $arrSum = [];
+    foreach ($arr1 as $key => $value) {
+        $arrSum[] = $arr1[$key] * $arr2[$key];
     }
+    print_r($arrSum);
+
