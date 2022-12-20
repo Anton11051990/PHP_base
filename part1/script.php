@@ -1,10 +1,14 @@
 <?php
-    $arr1 = [1,2,3,4,5,6,7,8,9,10];
-    $arr2 = [10,9,8,7,6,5,4,3,2,1];
+$arrayNumber = [4, 5, 1, 4, 7, 8, 15, 6, 71, 45, 2];
 
-    $arrSum = [];
-    foreach ($arr1 as $key => $value) {
-        $arrSum[] = $arr1[$key] * $arr2[$key];
+$parityCheck = array_map(function (int $number): string {
+    if ($number % 2 == 0) {
+        $arrayText = "$number четное\n";
+    } else {
+        $arrayText = "$number не четное\n";
     }
-    print_r($arrSum);
 
+    return $arrayText;
+}, $arrayNumber);
+
+print_r($parityCheck);
