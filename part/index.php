@@ -1,6 +1,9 @@
 <?php
-//require_once 'model/User.php';
-//session_start();
+require_once 'model/Task.php';
+require_once 'model/User.php';
+require_once 'model/TaskProvider.php';
+require_once 'model/UserProvider.php';
+
 $controller = $_GET['controller'] ?? 'home';
 $routes = require 'routes.php';
 
